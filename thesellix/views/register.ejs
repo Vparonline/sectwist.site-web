@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive Admin Dashboard Template">
+    <meta name="keywords" content="admin,dashboard">
+    <meta name="author" content="stacks">
+    
+    <title>Thesellix ~ Register</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/rs23.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700,800&display=swap" rel="stylesheet">
+    <link href="./assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="./assets/plugins/perfectscroll/perfect-scrollbar.css" rel="stylesheet">
+    <link href="./assets/plugins/pace/pace.css" rel="stylesheet">
+    <link href="./assets/css/main.min.css" rel="stylesheet">
+    <link href="./assets/css/custom.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+<body class="login-page">
+    
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-4">
+                <div class="card login-box-container">
+                    <div class="card-body">
+                        <div class="authent-logo">
+                            <a><img src="./assets/images/rs23.png" width="150px" height="120px"></a>
+                        </div>
+                        <div class="authent-text">
+                            <p style="color: #86C1ED">Ücretsiz olarak Thesellix'e katıl.</p>
+                        </div>
+                        <form id="form" action="/register" method="post">
+                            <div class="mb-3">
+                                <div class="form-floating">
+                                    <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Kullanıcı Kimliğiniz" required>
+                                    <label for="floatingInput">Kullanıcı Kimliğiniz</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-floating">
+                                    <input type="email" name="email" class="form-control" id="floatingInput1" placeholder="Email" required>
+                                    <label for="floatingInput">Email</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-floating">
+                                    <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Parola" required>
+                                    <label for="floatingPassword">Parola</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-floating">
+                                    <input type="password" name="password2" class="form-control" id="floatingPassword1" placeholder="Yeniden Parola" required>
+                                    <label for="floatingPassword">Yeniden Parola</label>
+                                </div>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" id="registerBtn" class="btn btn-primary m-b-xs" style="background-color: #86C1ED">Hesap Oluştur</button>
+                            </div>
+                        </form>
+                        <div class="authent-login">
+                            <p>Hesabınız mı var ? <a href="/login" style="color: #86C1ED">Oturum Aç</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./assets/plugins/perfectscroll/perfect-scrollbar.min.js"></script>
+    <script src="./assets/plugins/pace/pace.min.js"></script>
+    <script src="./assets/js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+  document.getElementById("registerBtn").addEventListener("click", function (event) {
+  event.preventDefault();
+
+  const registrationSuccessful = false;
+
+  if (registrationSuccessful) {
+
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Kayıt Başarısız",
+      text: "Lütfen elchavopy İle İletişime Geçiniz..",
+    });
+  }
+});
+
+    </script>
+
+</body>
+</html>

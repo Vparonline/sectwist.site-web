@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive Admin Dashboard Template">
+    <meta name="keywords" content="admin,dashboard">
+    <meta name="author" content="stacks">
+    <title>Thesellix ~ Login</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/rs23.png">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700,800&display=swap" rel="stylesheet">
+    <link href="./assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/plugins/font-awesome/css/all.min.css" rel="stylesheet">
+    <link href="./assets/plugins/perfectscroll/perfect-scrollbar.css" rel="stylesheet">
+    <link href="./assets/plugins/pace/pace.css" rel="stylesheet">
+    <link href="./assets/css/main.min.css" rel="stylesheet">
+    <link href="./assets/css/custom.css" rel="stylesheet">
+
+    <script type="text/javascript">
+		$(document).ready(() => {
+
+			$("#form").submit((event) => {
+				event.preventDefault();
+
+				$.ajax({
+					type: 'POST',
+					url: '/login',
+					data: $('#form').serialize(),
+					dataType: "json",
+					success: (response) => {
+						$('#form')[0].reset();
+
+						document.getElementById("check").innerHTML = response.Success;
+						//ADD THIS CODE
+						setTimeout(() => {
+							document.getElementById("check").innerHTML = "";
+						}, 3000);
+						if (response.Success == "Success!") {
+							document.getElementById("aa").click();
+						};
+					},
+					error: () => {
+					}
+				})
+			});
+
+		});
+	</script>
+</head>
+<body class="login-page" style="background-image: url('');">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-12 col-lg-4">
+                <div class="card login-box-container">
+                    <div class="card-body">
+                        <div class="authent-logo">
+                            <a><img src="./assets/images/rs23.png" width="150px" height="120px"></a>
+                        </div>
+                        <div class="authent-text">
+                            <p style="color: #86C1ED">Giriş yapmak için bilgileri doldur.</p>
+                        </div>
+                        <form id="form" method="post">
+                            <div class="mb-3">
+                                <div class="form-floating">
+                                    <input type="text" name="email" pattern="[-!#$%&'*+\/0-9=?ก-๙A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?ก-๙A-Z^_a-z`{|}~])*@[ก-๙a-zA-Z0-9](-*\.?[ก-๙a-zA-Z0-9])*\.[ก-๙a-zA-Z](-?[ก-๙a-zA-Z0-9])+$" class="form-control" id="floatingInput" placeholder="Kullanıcı Email" required>
+                                    <label for="floatingInput">Kullanıcı Kimliğiniz</label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-floating">
+                                    <input type="password" name="password" class="form-control" placeholder="Parola" required="">
+                                    <label for="floatingPassword">Parola</label>
+                                </div>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" value="Login" name="giris" class="btn btn-info m-b-xs" style="background-color: #86C1ED">Oturum Aç</button>
+                            </div>
+                        </form>
+                        <div class="authent-reg">
+                            <p>Kayıtlı değil misin? <a href="/register" style="color: #86C1ED">Bir hesap oluştur.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="./assets/plugins/perfectscroll/perfect-scrollbar.min.js"></script>
+    <script src="./assets/plugins/pace/pace.min.js"></script>
+    <script src="../assets/js/main.min.js"></script>
+</body>
+</html>

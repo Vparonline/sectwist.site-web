@@ -1,0 +1,585 @@
+<% let sw=bot.guilds.cache.get(sunucuID) %>
+<!DOCTYPE html>
+<html class="loading dark-layout" lang="en" data-layout="dark-layout" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Thesellix.site ~ Yönetim Paneli</title>
+    <link rel="apple-touch-icon" href="./assets/images/rs23.png">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/rs23.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/vendors/css/forms/select/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/vendors/css/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/vendors/css/extensions/sweetalert2.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/css/themes/bordered-layout.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/css/themes/semi-dark-layout.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/css/core/menu/menu-types/horizontal-menu.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/css/plugins/forms/form-validation.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/css/plugins/extensions/ext-component-sweet-alerts.css">
+
+    <link rel="stylesheet" type="text/css" href="./assets/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/app-assets/vendors/css/extensions/sweetalert2.min.css">
+
+</head>
+
+<body class="horizontal-layout horizontal-menu  navbar-floating footer-static  " data-open="hover" data-menu="horizontal-menu" data-col="">
+
+    <nav class="header-navbar navbar-expand-lg navbar navbar-fixed align-items-center navbar-shadow navbar-brand-center" data-nav="brand-center">
+        <div class="navbar-header d-xl-block d-none">
+            <ul class="nav navbar-nav">
+                <li class="nav-item"><a class="navbar-brand" href="/anasayfa"><span class="brand-logo">
+                        <h2 class="brand-text mb-0">Thesellix.site</h2>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="navbar-container d-flex content">
+            <ul class="nav navbar-nav align-items-center ms-auto">
+                <li class="nav-item dropdown dropdown-cart me-25"><a class="nav-link" href="#" data-bs-toggle="dropdown"><i class="ficon" data-feather="shopping-cart"></i><span class="badge rounded-pill bg-primary badge-up cart-item-count">6</span></a>
+                    <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
+                        <li class="dropdown-menu-header">
+                            <div class="dropdown-header d-flex">
+                                <h4 class="notification-title mb-0 me-auto">My Cart</h4>
+                                <div class="badge rounded-pill badge-light-primary">4 Items</div>
+                            </div>
+                        </li>
+                        <li class="scrollable-container media-list">
+                            <div class="list-item align-items-center"><img class="d-block rounded me-1" src="./assets/app-assets/images/pages/eCommerce/1.png" alt="donuts" width="62">
+                                <div class="list-item-body flex-grow-1"><i class="ficon cart-item-remove" data-feather="x"></i>
+                                    <div class="media-heading">
+                                        <h6 class="cart-item-title"><a class="text-body" href="app-ecommerce-details.html"> Apple watch 5</a></h6><small class="cart-item-by">By Apple</small>
+                                    </div>
+                                    <div class="cart-item-qty">
+                                        <div class="input-group">
+                                            <input class="touchspin-cart" type="number" value="1">
+                                        </div>
+                                    </div>
+                                    <h5 class="cart-item-price">$374.90</h5>
+                                </div>
+                            </div>
+                            <div class="list-item align-items-center"><img class="d-block rounded me-1" src="./assets/app-assets/images/pages/eCommerce/7.png" alt="donuts" width="62">
+                                <div class="list-item-body flex-grow-1"><i class="ficon cart-item-remove" data-feather="x"></i>
+                                    <div class="media-heading">
+                                        <h6 class="cart-item-title"><a class="text-body" href="app-ecommerce-details.html"> Google Home Mini</a></h6><small class="cart-item-by">By Google</small>
+                                    </div>
+                                    <div class="cart-item-qty">
+                                        <div class="input-group">
+                                            <input class="touchspin-cart" type="number" value="3">
+                                        </div>
+                                    </div>
+                                    <h5 class="cart-item-price">$129.40</h5>
+                                </div>
+                            </div>
+                            <div class="list-item align-items-center"><img class="d-block rounded me-1" src="./assets/app-assets/images/pages/eCommerce/2.png" alt="donuts" width="62">
+                                <div class="list-item-body flex-grow-1"><i class="ficon cart-item-remove" data-feather="x"></i>
+                                    <div class="media-heading">
+                                        <h6 class="cart-item-title"><a class="text-body" href="app-ecommerce-details.html"> iPhone 11 Pro</a></h6><small class="cart-item-by">By Apple</small>
+                                    </div>
+                                    <div class="cart-item-qty">
+                                        <div class="input-group">
+                                            <input class="touchspin-cart" type="number" value="2">
+                                        </div>
+                                    </div>
+                                    <h5 class="cart-item-price">$699.00</h5>
+                                </div>
+                            </div>
+                            <div class="list-item align-items-center"><img class="d-block rounded me-1" src="./assets/app-assets/images/pages/eCommerce/3.png" alt="donuts" width="62">
+                                <div class="list-item-body flex-grow-1"><i class="ficon cart-item-remove" data-feather="x"></i>
+                                    <div class="media-heading">
+                                        <h6 class="cart-item-title"><a class="text-body" href="app-ecommerce-details.html"> iMac Pro</a></h6><small class="cart-item-by">By Apple</small>
+                                    </div>
+                                    <div class="cart-item-qty">
+                                        <div class="input-group">
+                                            <input class="touchspin-cart" type="number" value="1">
+                                        </div>
+                                    </div>
+                                    <h5 class="cart-item-price">$4,999.00</h5>
+                                </div>
+                            </div>
+                            <div class="list-item align-items-center"><img class="d-block rounded me-1" src="./assets/app-assets/images/pages/eCommerce/5.png" alt="donuts" width="62">
+                                <div class="list-item-body flex-grow-1"><i class="ficon cart-item-remove" data-feather="x"></i>
+                                    <div class="media-heading">
+                                        <h6 class="cart-item-title"><a class="text-body" href="app-ecommerce-details.html"> MacBook Pro</a></h6><small class="cart-item-by">By Apple</small>
+                                    </div>
+                                    <div class="cart-item-qty">
+                                        <div class="input-group">
+                                            <input class="touchspin-cart" type="number" value="1">
+                                        </div>
+                                    </div>
+                                    <h5 class="cart-item-price">$2,999.00</h5>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown-menu-footer">
+                            <div class="d-flex justify-content-between mb-1">
+                                <h6 class="fw-bolder mb-0">Total:</h6>
+                                <h6 class="text-primary fw-bolder mb-0">$10,999.00</h6>
+                            </div><a class="btn btn-primary w-100" href="app-ecommerce-checkout.html">Checkout</a>
+                        </li>
+                    </ul>
+                </li><li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#" data-bs-toggle="dropdown"><i class="ficon" data-feather="bell"></i><span class="badge rounded-pill bg-danger badge-up"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
+                        <li class="dropdown-menu-header">
+                            <div class="dropdown-header d-flex">
+                                <h4 class="notification-title mb-0 me-auto">Bildirimler</h4>
+                               
+                            </div>
+                        </li>
+                        <li class="scrollable-container media-list"><a class="d-flex" href="#">
+                          <% if (notifications.length > 0) { %>
+                          <% for(let i=0; i < notifications.length; i++) { %>
+                            </a><a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="me-1">
+                                      <div class="avatar"><img src="./assets/images/rs23.png" alt="avatar" width="32" height="32"></div>
+                                    </div>
+                                    <div class="list-item-body flex-grow-1">
+                                      
+                                        <p class="media-heading"><span class="fw-bolder"><%= notifications[i].notifications %></span></p><small class="notification-text"> elchavopy</small>
+                                      </div>
+                                </div>
+                            </a>
+                            <% } %>
+                            <% } else { %>
+                              <a class="d-flex" href="#">
+                                <div class="list-item d-flex align-items-start">
+                                    <div class="list-item-body flex-grow-1">
+                                      
+                                        <p class="media-heading"><span class="fw-bolder">Bildirim Bulunammadı</span></p>
+                                      </div>
+                                </div>
+                            </a>
+                          <% } %>
+                        </li>
+                        <li class="dropdown-menu-footer"><a class="btn btn-primary w-100" href="#">Bildirimleri Temizle</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder"><%= name %></span><span class="user-status"><%= email %></span></div><span class="avatar"><img class="round" id="profilResmi" src="" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user"><a class="dropdown-item" href="/profil"><i class="me-50" data-feather="user"></i> Profil</a>
+                        <div class="dropdown-divider"></div><a class="dropdown-item" href="/manage-account"><i class="me-50" data-feather="settings"></i> Ayarlar</a><a class="dropdown-item" href="/logout"><i class="me-50" data-feather="power"></i> Çıkış Yap</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="main-search-list-defaultlist d-none">
+        <li class="d-flex align-items-center"><a href="#">
+                <h6 class="section-label mt-75 mb-0">Files</h6>
+            </a></li>
+        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+                <div class="d-flex">
+                    <div class="me-75"><img src="./assets/app-assets/images/icons/xls.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing Manager</small>
+                    </div>
+                </div><small class="search-data-size me-50 text-muted">&apos;17kb</small>
+            </a></li>
+        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+                <div class="d-flex">
+                    <div class="me-75"><img src="./assets/app-assets/images/icons/jpg.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd Developer</small>
+                    </div>
+                </div><small class="search-data-size me-50 text-muted">&apos;11kb</small>
+            </a></li>
+        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+                <div class="d-flex">
+                    <div class="me-75"><img src="./assets/app-assets/images/icons/pdf.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital Marketing Manager</small>
+                    </div>
+                </div><small class="search-data-size me-50 text-muted">&apos;150kb</small>
+            </a></li>
+        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
+                <div class="d-flex">
+                    <div class="me-75"><img src="./assets/app-assets/images/icons/doc.png" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web Designer</small>
+                    </div>
+                </div><small class="search-data-size me-50 text-muted">&apos;256kb</small>
+            </a></li>
+        <li class="d-flex align-items-center"><a href="#">
+                <h6 class="section-label mt-75 mb-0">Members</h6>
+            </a></li>
+        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view-account.html">
+                <div class="d-flex align-items-center">
+                    <div class="avatar me-75"><img src="./assets/app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
+                    </div>
+                </div>
+            </a></li>
+        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view-account.html">
+                <div class="d-flex align-items-center">
+                    <div class="avatar me-75"><img src="./assets/app-assets/images/portrait/small/avatar-s-1.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd Developer</small>
+                    </div>
+                </div>
+            </a></li>
+        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view-account.html">
+                <div class="d-flex align-items-center">
+                    <div class="avatar me-75"><img src="./assets/app-assets/images/portrait/small/avatar-s-14.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing Manager</small>
+                    </div>
+                </div>
+            </a></li>
+        <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view-account.html">
+                <div class="d-flex align-items-center">
+                    <div class="avatar me-75"><img src="./assets/app-assets/images/portrait/small/avatar-s-6.jpg" alt="png" height="32"></div>
+                    <div class="search-data">
+                        <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
+                    </div>
+                </div>
+            </a></li>
+    </ul>
+    <ul class="main-search-list-defaultlist-other-list d-none">
+        <li class="auto-suggestion justify-content-between"><a class="d-flex align-items-center justify-content-between w-100 py-50">
+                <div class="d-flex justify-content-start"><span class="me-75" data-feather="alert-circle"></span><span>No results found.</span></div>
+            </a></li>
+    </ul>
+
+    <div class="horizontal-menu-wrapper">
+        <div class="header-navbar navbar-expand-sm navbar navbar-horizontal floating-nav navbar-dark navbar-shadow menu-border container-xxl" role="navigation" data-menu="menu-wrapper" data-menu-type="floating-nav">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item me-auto"><a class="navbar-brand" href="/anasayfa"><span class="brand-logo">
+                            <h2 class="brand-text mb-0">Thesellix.site</h2>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="shadow-bottom"></div>
+            <div class="navbar-container main-menu-content" data-menu="menu-container">
+                <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link d-flex align-items-center" href="/anasayfa"><i data-feather="home"></i><span>Anasayfa</span></a>
+                    </li>
+                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link d-flex align-items-center" href="/setup"><i data-feather="settings"></i><span>Kurulum</span></a>
+                    </li>
+                    <li class="dropdown nav-item"><a class="dropdown-toggle nav-link d-flex align-items-center" href="/limit"><i data-feather="users"></i><span>Limit</span></a>
+                    </li>
+            </div>
+        </div>
+    </div>
+    <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <section class="app-user-view-billing">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-md-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="user-avatar-section">
+                                        <div class="d-flex align-items-center flex-column">
+                                            <img id="profilResmii" class="img-fluid rounded mt-3 mb-2" src="" height="110" width="110" alt="User avatar" />
+                                            
+                                            <div class="user-info text-center">
+                                                <h4><%= name %></h4>
+                                                <span class="badge bg-light-secondary"><%= perm %></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-around my-2 pt-75">
+                                        <div class="d-flex align-items-start me-2">
+                                            <span class="badge bg-light-primary p-75 rounded">
+                                                <i data-feather="check" class="font-medium-2"></i>
+                                            </span>
+                                            <div class="ms-75">
+                                                <h4 class="mb-0">0 Adet</h4>
+                                                <small>Çözülen Destek</small>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-start">
+                                            <span class="badge bg-light-primary p-75 rounded">
+                                                <i data-feather="briefcase" class="font-medium-2"></i>
+                                            </span>
+                                            <div class="ms-75">
+                                                <h4 class="mb-0">1 Adet</h4>
+                                                <small>Aktif Hizmet</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4 class="fw-bolder border-bottom pb-50 mb-1">Detaylar</h4>
+                                    <div class="info-container">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-75">
+                                                <span class="fw-bolder me-25">Kullanıcı Adı:</span>
+                                                <span><%= name %></span>
+                                            </li>
+                                            <li class="mb-75">
+                                                <span class="fw-bolder me-25">Kullanıcı ID:</span>
+                                                <span><%= KullanıcıID %></span>
+                                            </li>
+                                            <li class="mb-75">
+                                                <span class="fw-bolder me-25">E-Posta:</span>
+                                                <span><%= email %></span>
+                                            </li>
+                                            <li class="mb-75">
+                                                <span class="fw-bolder me-25">Sunucu:</span>
+                                                <span class="badge bg-light-info"><%= sw.name %></span>
+                                            </li>
+                                            <li class="mb-75">
+                                                <span class="fw-bolder me-25">Durum:</span>
+                                                <span class="badge bg-light-success">Aktif</span>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Hizmetlerim</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+                                            <div class="mb-2 mb-md-1">
+                                                <img src="./assets/images/rs23.png" width="118px;">
+                                                <h5>Dealership Hizmeti<span class="badge badge-light-success ms-50">Tavsiye Edilen!</span></h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="button" class="btn btn-outline-success waves-effect" id="type-success"><i data-feather='play'></i></button>
+                                            <button type="button" class="btn btn-outline-warning waves-effect" id="type-warning"><i data-feather='pause'></i></button>
+                                            <button type="button" class="btn btn-outline-info waves-effect" id="type-info"> <i data-feather='refresh-ccw'></i> </button>
+                                            <button type="button" class="btn btn-outline-danger waves-effect" id="type-error"><i data-feather='trash'></i></button>
+                                            <button type="button" class="btn btn-outline-info waves-effect" id="type-info"> <i data-feather='settings'></i> </button>
+                                            <br><br><br><div class="plan-statistics pt-1">
+                                                <div class="d-flex justify-content-between">
+                                                    <h5 class="fw-bolder">1. Gün</h5>
+                                                    <h5 class="fw-bolder">30 Gün</h5>
+                                                </div>
+                                                <div class="progress">
+                                                    <div class="progress-bar w-0" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <p class="mt-50"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered modal-edit-user">
+                        <div class="modal-content">
+                            <div class="modal-header bg-transparent">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-5 px-sm-5 pt-50">
+                                <div class="text-center mb-2">
+                                    <h1 class="mb-1">Edit User Information</h1>
+                                    <p>Updating user details will receive a privacy audit.</p>
+                                </div>
+                                <form id="editUserForm" class="row gy-1 pt-75" onsubmit="return false">
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserFirstName">First Name</label>
+                                        <input type="text" id="modalEditUserFirstName" name="modalEditUserFirstName" class="form-control" placeholder="John" value="Gertrude" data-msg="Please enter your first name" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserLastName">Last Name</label>
+                                        <input type="text" id="modalEditUserLastName" name="modalEditUserLastName" class="form-control" placeholder="Doe" value="Barton" data-msg="Please enter your last name" />
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label" for="modalEditUserName">Username</label>
+                                        <input type="text" id="modalEditUserName" name="modalEditUserName" class="form-control" value="gertrude.dev" placeholder="john.doe.007" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserEmail">Billing Email:</label>
+                                        <input type="text" id="modalEditUserEmail" name="modalEditUserEmail" class="form-control" value="gertrude@gmail.com" placeholder="example@domain.com" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserStatus">Status</label>
+                                        <select id="modalEditUserStatus" name="modalEditUserStatus" class="form-select" aria-label="Default select example">
+                                            <option selected>Status</option>
+                                            <option value="1">Active</option>
+                                            <option value="2">Inactive</option>
+                                            <option value="3">Suspended</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditTaxID">Tax ID</label>
+                                        <input type="text" id="modalEditTaxID" name="modalEditTaxID" class="form-control modal-edit-tax-id" placeholder="Tax-8894" value="Tax-8894" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserPhone">Contact</label>
+                                        <input type="text" id="modalEditUserPhone" name="modalEditUserPhone" class="form-control phone-number-mask" placeholder="+1 (609) 933-44-22" value="+1 (609) 933-44-22" />
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserLanguage">Language</label>
+                                        <select id="modalEditUserLanguage" name="modalEditUserLanguage" class="select2 form-select" multiple>
+                                            <option value="english">English</option>
+                                            <option value="spanish">Spanish</option>
+                                            <option value="french">French</option>
+                                            <option value="german">German</option>
+                                            <option value="dutch">Dutch</option>
+                                            <option value="hebrew">Hebrew</option>
+                                            <option value="sanskrit">Sanskrit</option>
+                                            <option value="hindi">Hindi</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <label class="form-label" for="modalEditUserCountry">Country</label>
+                                        <select id="modalEditUserCountry" name="modalEditUserCountry" class="select2 form-select">
+                                            <option value="">Select Value</option>
+                                            <option value="Australia">Australia</option>
+                                            <option value="Bangladesh">Bangladesh</option>
+                                            <option value="Belarus">Belarus</option>
+                                            <option value="Brazil">Brazil</option>
+                                            <option value="Canada">Canada</option>
+                                            <option value="China">China</option>
+                                            <option value="France">France</option>
+                                            <option value="Germany">Germany</option>
+                                            <option value="India">India</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Israel">Israel</option>
+                                            <option value="Italy">Italy</option>
+                                            <option value="Japan">Japan</option>
+                                            <option value="Korea">Korea, Republic of</option>
+                                            <option value="Mexico">Mexico</option>
+                                            <option value="Philippines">Philippines</option>
+                                            <option value="Russia">Russian Federation</option>
+                                            <option value="South Africa">South Africa</option>
+                                            <option value="Thailand">Thailand</option>
+                                            <option value="Turkey">Turkey</option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="United Arab Emirates">United Arab Emirates</option>
+                                            <option value="United Kingdom">United Kingdom</option>
+                                            <option value="United States">United States</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="d-flex align-items-center mt-1">
+                                            <div class="form-check form-switch form-check-primary">
+                                                <input type="checkbox" class="form-check-input" id="customSwitch10" checked />
+                                                <label class="form-check-label" for="customSwitch10">
+                                                    <span class="switch-icon-left"><i data-feather="check"></i></span>
+                                                    <span class="switch-icon-right"><i data-feather="x"></i></span>
+                                                </label>
+                                            </div>
+                                            <label class="form-check-label fw-bolder" for="customSwitch10">Use as a billing address?</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center mt-2 pt-50">
+                                        <button type="submit" class="btn btn-primary me-1">Submit</button>
+                                        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">
+                                            Discard
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+
+            </div>
+        </div>
+    </div>
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <footer class="footer footer-static footer-light footer-shadow">
+        <p class="clearfix mb-0"><span class="float-md-start d-block d-md-inline-block mt-25"><a href="https://www.thesellix.site">Thesellix.site </a>&copy; 2021<a class="ms-25" href="https://discord.com/users/1067476859933179954" target="_blank">elchavopy</a><span class="d-none d-sm-inline-block">, All rights Reserved</span></span><span class="float-md-end d-none d-md-block">Créated by elchâvo.py<i data-feather="heart"></i></span></p>
+    </footer>
+    <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
+
+    <script src="./assets/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="./assets/app-assets/vendors/js/ui/jquery.sticky.js"></script>
+    <script src="./assets/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <script src="./assets/app-assets/vendors/js/forms/cleave/cleave.min.js"></script>
+    <script src="./assets/app-assets/vendors/js/forms/cleave/addons/cleave-phone.us.js"></script>
+    <script src="./assets/app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <script src="./assets/app-assets/vendors/js/extensions/sweetalert2.all.min.js"></script>
+    <script src="./assets/app-assets/vendors/js/extensions/polyfill.min.js"></script>
+    <script src="./assets/app-assets/js/core/app-menu.js"></script>
+    <script src="./assets/app-assets/js/core/app.js"></script>
+    <script src="./assets/app-assets/js/scripts/pages/modal-edit-user.js"></script>
+    <script src="./assets/app-assets/js/scripts/pages/modal-add-new-cc.js"></script>
+    <script src="./assets/app-assets/js/scripts/pages/modal-edit-cc.js"></script>
+    <script src="./assets/app-assets/js/scripts/pages/modal-add-new-address.js"></script>
+    <script src="./assets/app-assets/js/scripts/pages/app-user-view-billing.js"></script>
+    <script src="./assets/app-assets/js/scripts/pages/app-user-view.js"></script>
+
+    <script>
+        $(window).on('load', function() {
+            if (feather) {
+                feather.replace({
+                    width: 14,
+                    height: 14
+                });
+            }
+        })
+    </script>
+    <script>
+const rastgeleFotograflar = [
+  'https://media.discordapp.net/attachments/1121240078476386314/1121590584734384208/qq.gif?ex=6531c321&is=651f4e21&hm=149c1482e5e947b5b980535b7ea053c8492d82ef1a6048e1ef482b839b462e08&=&width=187&height=187',
+];
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const rastgeleIndex = Math.floor(Math.random() * rastgeleFotograflar.length);
+        const secilenFoto = rastgeleFotograflar[rastgeleIndex];
+        document.getElementById('profilResmi').src = secilenFoto;
+      });  
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const rastgeleIndex = Math.floor(Math.random() * rastgeleFotograflar.length);
+            const secilenFoto = rastgeleFotograflar[rastgeleIndex];
+            document.getElementById('profilResmii').src = secilenFoto;
+          });  
+        </script>
+        <script>
+            let avatarStatusElement = document.querySelector('.avatar-status-online');
+            let idleTimeout;
+            
+            document.addEventListener('mousemove', () => {
+              clearTimeout(idleTimeout);
+              
+              if (avatarStatusElement.classList.contains('avatar-status-away')) {
+                avatarStatusElement.classList.remove('avatar-status-away');
+              }
+              
+              idleTimeout = setTimeout(() => {
+                avatarStatusElement.classList.add('avatar-status-away');
+              }, 30000);
+            });
+            
+            document.addEventListener('mouseleave', () => {
+              if (!avatarStatusElement.classList.contains('avatar-status-online')) {
+                avatarStatusElement.classList.add('avatar-status-online');
+              }
+            });
+            </script>
+</body>
+
+</html>
