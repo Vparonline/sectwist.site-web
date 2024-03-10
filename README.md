@@ -1,5 +1,4 @@
 # sectwist-web
-Çoluk Çocuğa Oyuncak Olsun
 
 Sectwist.site[thesellix] kaynak kodları kurmalık hiç bir şey yok şemanı değiş gerisi kolay :D
 
