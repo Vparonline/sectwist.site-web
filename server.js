@@ -43,7 +43,7 @@ const yeniKullanici = new User({
 
 yeniKullanici.save((err) => {
   if (err) {
-    console.error('Hataoc', err);
+    console.error('Hata', err);
   } else {
     console.log('Kullanıcı başarıyla kaydedildi.');
   }
